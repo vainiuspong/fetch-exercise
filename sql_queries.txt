@@ -1,0 +1,22 @@
+Which brand has the most spend among users who were created within the past 6 months?
+Which brand has the most transactions among users who were created within the past 6 months?
+
+SELECT
+    b.name AS brand_name,
+    SUM(r.totalSpent) AS total_spend,
+    COUNT(t.transaction_id) AS transaction_count
+FROM
+    users u
+JOIN
+    receipts r ON u.user_id = r.user_id
+JOIN
+    transactions t ON r.receipt_id = t.receipt_id
+JOIN
+    brands b ON t.brand_id = b.brand_id
+WHERE
+    u.createdDate >= DATEADD(MONTH, -6, CURRENT_DATE())
+GROUP BY
+    b.name
+ORDER BY
+    total_spend DESC, transaction_count DESC
+LIMIT 5;

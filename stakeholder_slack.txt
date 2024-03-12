@@ -1,0 +1,14 @@
+Hi ___,
+
+I'm reaching out to followup on the datasets you asked me to explore. 
+Here are a few of the issues I found so far:
+
+1. There are a lot of null values in the brands and receipts datasets. 
+2. There are a significant amount of duplicates in the users and brands datasets.
+
+How would you like to address these issues? First, there is a lot of cleanup and
+further investigation that would be necessary to make this data trustworthy.
+Second, I would recommend building a system that would be able to monitor for all these data quality issues 
+and send automated alerts if anything goes wrong.
+
+I would also be interested to learn exactly how the data will be used so that I can set it up to be most useful to you. Thanks!
